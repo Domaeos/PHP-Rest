@@ -17,4 +17,15 @@ if ($uri[1] !== 'person') {
     exit();
 }
 
+$userId = null;
+if (isset($uri[2])) {
+    $userId = (int) $uri[2];
+}
+
+$requestMethod = $_SERVER["REQUEST_METHOD"];
+
+// pass connection, request method and user id (if given) to controller
+$controller = new PersonController($dbConnection, $requestMethod, $userId);
+$controller->processRequest();
+
 ?>
