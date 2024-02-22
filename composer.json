@@ -1,0 +1,17 @@
+{
+    "name": "ryan/php",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Domaeos",
+            "email": "ryanmurphy.ic@icloud.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
